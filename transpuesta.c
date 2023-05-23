@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include <conio.h>
 
 int main()
@@ -11,27 +13,19 @@ int main()
     scanf("%d", &columna);
 
     int A[fila][columna];
-
-    printf("Ingresar los elementos para la matriz:\n");
-    for (int i = 0; i < fila; i++)
-    {
-        for (int j = 0; j < columna; j++)
-        {
-            printf("Ingrese el elemento en la posición [%d][%d]: ", i, j);//subtarea para el usuario
-            scanf("%d", &A[i][j]);
-        }
-    }
+    srand(time(NULL));
 
     printf("Matriz original:\n");//estructura de la matriz
     for (int i = 0; i < fila; i++)
     {
         for (int j = 0; j < columna; j++)
         {
+            A[i][j] = rand() % 101;
             printf("%d ", A[i][j]);
+            
         }
         printf("\n");
     }
-
     
     printf("Matriz transpuesta:\n");//transpuesta
     for (int j = 0; j < columna; j++)
