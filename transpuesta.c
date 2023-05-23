@@ -20,7 +20,7 @@ int main()
     {
         for (int j = 0; j < columna; j++)
         {
-            A[i][j] = rand() % 101;
+            A[i][j] = rand() % 101;//para que el programa de los numeros
             printf("%d ", A[i][j]);
             
         }
@@ -36,6 +36,7 @@ int main()
         }
         printf("\n");
     }
+    
 
     getch();
     return 0;
