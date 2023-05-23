@@ -21,7 +21,6 @@ int main(int argc, char *argv[])
             for (int k = 0; k < columna; k++)
             {
                 matriz[i][j][k] = 0;
-                print("%d",matriz);
             }
             "\n";
         }
