@@ -1,32 +1,48 @@
 #include <stdio.h>
 #include <conio.h>
 
-int main(int argc, char *argv[])
+int main()
 {
-    int matriz, fila, columna, n;
+    int fila, columna;
 
-    printf("Escribir la cantidad de martrices que se va a generar: " );
-    scanf("%d", &matriz);
-    printf("Escribir la cantidad de filas que se va a generar: " );
+    printf("Escribir la cantidad de filas que se va a generar: ");
     scanf("%d", &fila);
-    printf("Escribir la cantidad de columnas que se va a generar: " ); //subtareas para el usuario
+    printf("Escribir la cantidad de columnas que se va a generar: ");
     scanf("%d", &columna);
 
-    int matriz[matriz][fila][columna];
+    int A[fila][columna];
 
-    for (int i = 0; i < matriz; i++)//estructura de la matriz
+    printf("Ingresar los elementos para la matriz:\n");
+    for (int i = 0; i < fila; i++)
     {
-        for (int j = 0; j < fila; j++)
+        for (int j = 0; j < columna; j++)
         {
-            for (int k = 0; k < columna; k++)
-            {
-                matriz[i][j][k] = 0;
-            }
-            "\n";
+            printf("Ingrese el elemento en la posición [%d][%d]: ", i, j);
+            scanf("%d", &A[i][j]);
         }
-        "\n";
     }
+
+    printf("Matriz original:\n");
+    for (int i = 0; i < fila; i++)
+    {
+        for (int j = 0; j < columna; j++)
+        {
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+
     
+    printf("Matriz transpuesta:\n");
+    for (int j = 0; j < columna; j++)
+    {
+        for (int i = 0; i < fila; i++)
+        {
+            printf("%d ", A[i][j]);
+        }
+        printf("\n");
+    }
+
     getch();
     return 0;
 }
