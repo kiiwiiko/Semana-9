@@ -17,12 +17,12 @@ int main()
     {
         for (int j = 0; j < columna; j++)
         {
-            printf("Ingrese el elemento en la posición [%d][%d]: ", i, j);
+            printf("Ingrese el elemento en la posición [%d][%d]: ", i, j);//subtarea para el usuario
             scanf("%d", &A[i][j]);
         }
     }
 
-    printf("Matriz original:\n");
+    printf("Matriz original:\n");//estructura de la matriz
     for (int i = 0; i < fila; i++)
     {
         for (int j = 0; j < columna; j++)
@@ -33,7 +33,7 @@ int main()
     }
 
     
-    printf("Matriz transpuesta:\n");
+    printf("Matriz transpuesta:\n");//transpuesta
     for (int j = 0; j < columna; j++)
     {
         for (int i = 0; i < fila; i++)
